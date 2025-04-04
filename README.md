@@ -11,6 +11,7 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#installation">Installation</a> •
+  <a href="#released-builds">Released Builds</a> •
   <a href="#usage">Usage</a> •
   <a href="#development">Development</a> •
   <a href="#build">Build</a> •
@@ -21,8 +22,11 @@
 </p>
 
 <p align="center">
-  <!-- Add screenshot placeholder -->
-  <em>Screenshot placeholder - add your application screenshot here</em>
+  <img src="assets/screenshot1 (1).png" alt="Anomaly Editor Screenshot 1" width="600">
+</p>
+
+<p align="center">
+  <img src="assets/screenshot1 (2).png" alt="Anomaly Editor Screenshot 2" width="600">
 </p>
 
 ## Key Features
@@ -62,6 +66,16 @@ npm install
 # Run the application in development mode
 npm start
 ```
+
+## Released Builds
+
+You can download the latest release of Anomaly Editor from the following link:
+
+- [Download Latest Release](https://github.com/Caibran/Anomaly/releases)
+
+Available packages:
+- **Windows Portable**: Just extract and run, no installation needed
+- **Windows Installer**: Full installation with start menu shortcuts
 
 ## Usage
 
