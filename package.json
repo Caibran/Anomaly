@@ -1,0 +1,85 @@
+{
+  "name": "anomaly",
+  "version": "1.0.0",
+  "main": "standalone-main.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"cross-env PORT=3002 react-scripts start\" \"node wait-for-react.js\"",
+    "electron-start": "electron .",
+    "react-start": "cross-env PORT=3002 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-build": "electron-builder --config electron-builder-config.js",
+    "package-win": "npm run build && electron-packager . Anomaly --platform=win32 --arch=x64 --out=dist/ --overwrite --icon=assets/icon.ico --prune=true --asar --ignore=node_modules/electron-*",
+    "package-simple": "electron-packager . Anomaly --platform=win32 --arch=x64 --out=dist/ --overwrite --prune=true --asar",
+    "create-zip": "node scripts/create-zip.js",
+    "build-dist": "npm run build && npm run package-simple && npm run create-zip",
+    "release": "npm run build && electron-builder --publish=always"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A simple Markdown editor with dark theme",
+  "dependencies": {
+    "electron-is-dev": "^3.0.1",
+    "electron-store": "^10.0.1",
+    "marked": "^15.0.7",
+    "path-browserify": "^1.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "showdown": "^2.1.0",
+    "styled-components": "^6.1.17",
+    "wait-on": "^8.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^35.1.3",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "react-scripts": "^5.0.1"
+  },
+  "homepage": "./",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.anomaly.editor",
+    "productName": "Anomaly Editor",
+    "files": [
+      "build/**/*",
+      "standalone-main.js",
+      "preload.js",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        },
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "extends": null
+  }
+}

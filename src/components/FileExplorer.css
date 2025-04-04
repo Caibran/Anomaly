@@ -1,0 +1,181 @@
+.file-explorer {
+  width: 250px;
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.file-explorer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #333;
+  background-color: #252526;
+}
+
+.file-explorer-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.file-explorer-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.file-explorer-actions button {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.file-explorer-actions button:hover {
+  background-color: #444;
+}
+
+.file-explorer-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.no-folder-message,
+.empty-folder-message {
+  padding: 16px;
+  text-align: center;
+  color: #888;
+}
+
+.open-folder-button,
+.create-file-button {
+  margin-top: 8px;
+  background-color: #0e639c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.open-folder-button:hover,
+.create-file-button:hover {
+  background-color: #1177bb;
+}
+
+.file-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-item {
+  margin: 2px 0;
+}
+
+.file-item-content {
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #ddd;
+  position: relative;
+}
+
+.file-item-content:hover {
+  background-color: #2a2a2a;
+}
+
+.file-item.selected .file-item-content {
+  background-color: #37373d;
+}
+
+.file-icon {
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  width: 16px;
+}
+
+.folder-icon {
+  color: #e8ab53;
+}
+
+.folder-open-icon {
+  color: #e8ab53;
+}
+
+.markdown-icon {
+  color: #6997d5;
+}
+
+.file-icon {
+  color: #cccccc;
+}
+
+.empty-folder {
+  padding: 4px 0 4px 24px;
+  color: #888;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.file-name {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-actions {
+  opacity: 0;
+  color: #888;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.file-item-content:hover .file-actions {
+  opacity: 1;
+}
+
+.context-menu {
+  background-color: #252526;
+  border: 1px solid #333;
+  border-radius: 4px;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.context-menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.context-menu-item:hover {
+  background-color: #2a2d2e;
+}
+
+.context-menu-item.delete {
+  color: #f14c4c;
+}
+
+.context-menu-item.delete:hover {
+  background-color: rgba(241, 76, 76, 0.1);
+} 

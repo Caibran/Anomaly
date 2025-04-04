@@ -1,0 +1,18 @@
+export const darkTheme = {
+  background: '#1e1e1e',
+  sidebarBackground: '#252526',
+  editorBackground: '#1e1e1e',
+  text: '#d4d4d4',
+  accent: '#569cd6',
+  highlight: '#264f78',
+  border: '#333333',
+  hoveredItem: '#2a2d2e',
+  selectedItem: '#37373d',
+  buttonBackground: '#0e639c',
+  buttonHover: '#1177bb',
+  buttonActive: '#0e5a8d',
+  scrollbarThumb: '#424242',
+  scrollbarTrack: '#1e1e1e',
+  editorLineHighlight: '#2a2d2e',
+  editorCursor: '#d4d4d4',
+}; 

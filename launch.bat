@@ -1,0 +1,3 @@
+@echo off
+echo Starting Anomaly Editor...
+start "" Anomaly.exe 
