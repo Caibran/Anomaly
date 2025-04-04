@@ -1,7 +1,7 @@
 # Anomaly Editor
 
 <p align="center">
-  <img src="assets/icon.ico" alt="Anomaly Editor Logo" width="100" height="100">
+  <img src="assets/logo.png" alt="Anomaly Editor Logo" width="200">
 </p>
 
 <p align="center">
